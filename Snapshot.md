@@ -13,11 +13,11 @@ wget -O quicksilverMain.tar.lz4 https://ytwofund.pro/snapshot/quicksilverMain/qu
 ```
 Stop the node:
 ```
-systemctl stop quicksilver.service
+systemctl stop quicksilverd.service
 ```
 Reset the node's data:
 ```
-quicksilver tendermint unsafe-reset-all --home $HOME/.quicksilverd --keep-addr-book
+quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd --keep-addr-book
 ```
 Unpack the snapshot to the location of your database:
 ```
@@ -25,11 +25,11 @@ lz4 -c -d quicksilverMain.tar.lz4  | tar -x -C $HOME/.quicksilverd/data/
 ```
 Restart the node:
 ```
-systemctl restart quicksilver.service
+systemctl restart quicksilverd.service
 ```
 Request the logs to make sure the node is working and synchronization has started:
 ```
-sudo journalctl -u quicksilver -f
+sudo journalctl -u quicksilverd -f
 ```
 To save space, delete the downloaded snapshot:
 ```
