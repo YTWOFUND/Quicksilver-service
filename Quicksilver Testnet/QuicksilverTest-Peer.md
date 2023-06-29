@@ -2,11 +2,11 @@
 To synchronize, you can use our peer by adding it to the config.toml file.
 
 ```
-97b305b91092202eb8ee143f93ae2a0fb7c5d2c8@188.172.228.225:26696
+415fd7164d58c248feded4a81f4ad5f67d2981ea@94.16.123.116:16696
 ```
 To add the peer, you can use the following instructions:
 ```
-PEERS=97b305b91092202eb8ee143f93ae2a0fb7c5d2c8@188.172.228.225:26696
+PEERS=415fd7164d58c248feded4a81f4ad5f67d2981ea@94.16.123.116:16696
 sed -i.bak -e "s/^persistent_peers =./persistent_peers = "$PEERS"/" $HOME/.quicksilverd/config/config.toml
 ```
 
